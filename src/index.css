@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  .btn{
+    @apply bg-main text-white px-5 my-4 py-2 hover:scale-105 hover:bg-red-900
+  }
+  .in{
+    @apply bg-white border-[1px] w-full  focus:outline-none focus:border-main border-black/70 py-3 px-2 my-2
+  }
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(35, 35, 35, 0.87);
+  background-color: #F0F0F0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+}
+
+
+::-webkit-scrollbar{
+  background-color: #F0F0F0;
+  width: 18px;
+  
+}
+
+::-webkit-scrollbar{
+  background-color: transparent;
+  width: 18px;
+  
+
+  
+  
+}
+
+
+
+::-webkit-scrollbar-thumb{
+  background-color: #F0F0F0;
+  border-radius: 25px;
+  border: 6px solid #F0F0F0;
+
+  
+}
+::-webkit-scrollbar-corner{
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+
+
+::-webkit-scrollbar-thumb{
+  background-color: #c508089d;
+  border: 5px solid #F0F0F0;
+  border-radius: 15px;
+  
+  
+}
+
+
+.PopUp{
+  animation: popup 0.3s ease-in-out forwards;
+}
+
+
+@keyframes popup {
+  from {
+    transform: scale(0.5); /* Start from a smaller size */
+    opacity: 0; /* Start from transparent */
+  }
+  to {
+    transform: scale(1); /* End at full size */
+    opacity: 1; /* End at fully visible */
+  }
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#C50808 0 0);
+  background: 
+    var(--c) 0%   50%,
+    var(--c) 50%  50%,
+    var(--c) 100% 50%;
+  background-size: 20% 100%;
+  animation: l1 1s infinite linear;
+}
+@keyframes l1 {
+  0%  {background-size: 20% 100%,20% 100%,20% 100%}
+  33% {background-size: 20% 10% ,20% 100%,20% 100%}
+  50% {background-size: 20% 100%,20% 10% ,20% 100%}
+  66% {background-size: 20% 100%,20% 100%,20% 10% }
+  100%{background-size: 20% 100%,20% 100%,20% 100%}
+}
