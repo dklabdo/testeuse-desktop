@@ -106,10 +106,10 @@ function AdminLigne({ img, name, email ,id }) {
           <p className="text-base font-normal"> {email} </p>
         </div>
       </div>
-      <button onClick={() => DeleteAdminMutation.mutate()} className={ `flex text-sm py-2 px-6 rounded-3xl bg-main text-white gap-2 items-center ${DeleteAdminMutation.isPending ? "bg-gray-500" : "bg-main"} ` } >
+      {email != "testeuse@gmail.com" && <button onClick={() => DeleteAdminMutation.mutate()} className={ `flex text-sm py-2 px-6 rounded-3xl bg-main text-white gap-2 items-center ${DeleteAdminMutation.isPending ? "bg-gray-500" : "bg-main"} ` } >
         {" "}
         <Trash /> Bann{" "}
-      </button>
+      </button>}
     </div>
   );
 }
