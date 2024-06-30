@@ -49,7 +49,7 @@ function User() {
     <>
       <div className="w-full h-screen  ">
         <NavBar searchBy="user" serach={true} />
-        <div className="relative px-4 flex flex-col overflow-y-auto h-full py-8 ">
+        <div className="relative px-4 flex flex-col-reverse overflow-y-auto h-full py-8 ">
           {!UserQuery.isLoading && !UserQuery.isError ? (
            
            UserQuery.data.length == 0 ? (
